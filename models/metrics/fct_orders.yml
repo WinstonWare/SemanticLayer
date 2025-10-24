@@ -25,6 +25,8 @@ semantic_models:
         expr: order_total
       - name: is_food_order
         type: categorical
+      - name: is_drink_order
+        type: categorical
 
     measures:
       - name: order_total
@@ -138,6 +140,12 @@ metrics:
     type: simple
     type_params:
       measure: order_cost
+  - name: "order_count"
+    label: "order_count"
+    description: the number of orders placed
+    type: simple
+    type_params: 
+      measure: order_count
 
 #Ratio type metric
   - name: "food_order_pct"
