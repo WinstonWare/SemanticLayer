@@ -6,7 +6,8 @@ semantic_models:
       Order fact table. This table is at the order grain with one row per order.
     model: ref('fct_orders')
     entities:
-      - name: order_id
+      - name: order
+        expr: order_id
         type: primary
       - name: location
         type: foreign
@@ -27,6 +28,11 @@ semantic_models:
         type: categorical
       - name: is_drink_order
         type: categorical
+      - name: last_ordered_at
+        type: time
+        type_params: 
+          time_granularity: day
+
 
     measures:
       - name: order_total

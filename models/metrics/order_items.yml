@@ -42,4 +42,8 @@ semantic_models:
         description: the median revenue generated for each order item
         agg: median
         expr: product_price
+      - name: min_order_total
+        description: the minimum order total
+        agg: min
+        expr: order_total
 
